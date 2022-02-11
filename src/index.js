@@ -11,15 +11,19 @@ function clearFields () {
   $('#non-user-error').html("");
   $('#user-good').hide();
   $('#user-bad').hide();
+  $('#api-bad').hide();
   $('#show-error').hide();
 }
 
 function getElements(response) {
+  console.log(response);
   if (response.result === "success") {
     $('#user-good').show();
     $('#currency-results').html(`${response.conversion_result.toFixed(2)} ${response.target_code}`);
-  } else if (response.result === "error") {
+  } else if (response['error-type'] === "malformed-request") {
     $('#user-bad').show();
+  } else if (response['error-type'] === "invalid-key") {
+    $('#api-bad').show();
   } else {
     $('#show-error').show();
     $('#non-user-error').html(`${response}`);
