@@ -13,6 +13,7 @@ function clearFields () {
   $('#user-bad').hide();
   $('#api-bad').hide();
   $('#show-error').hide();
+  $('#catch-user-errors').hide();
 }
 
 function getElements(response) {
@@ -22,10 +23,10 @@ function getElements(response) {
     $('#currency-results').html(`${response.conversion_result.toFixed(2)} ${response.target_code}`);
   } else if (response['error-type'] === "malformed-request") {
     $('#user-bad').show();
-    $('#user-error-code').html("403: Malformed request");
+    $('#user-error-code').html("403: Malformed request. Stick to 3 letters please!");
   } else if (response['error-type'] === "unsupported-code") {
     $('#user-bad').show();
-    $('#user-error-code').html("404: Unsupported code");
+    $('#user-error-code').html("404: Unsupported code. Check your input and try again!");
   } else if (response['error-type'] === "invalid-key") {
     $('#api-bad').show();
   } else {
@@ -40,6 +41,10 @@ $(document).ready(function() {
     let userCurrency = $('#user-currency-choice').val();
     let userAmount = $('#user-dollars').val();
     clearFields();
+    if (userCurrency.length !== 3 || /\d/.test(userCurrency) === true) {
+      $('#catch-user-errors').show();
+      return;
+    }
     CurrencyExchanger.exchangeRate(userCurrency, userAmount)
       .then(function(response) {
         getElements(response);
