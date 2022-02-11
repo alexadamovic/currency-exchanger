@@ -15,10 +15,9 @@ function clearFields () {
 }
 
 function getElements(response) {
-  console.log(response);
   if (response.result === "success") {
     $('#user-good').show();
-    $('#currency-results').html(`${response.conversion_result} ${response.target_code}`);
+    $('#currency-results').html(`${response.conversion_result.toFixed(2)} ${response.target_code}`);
   } else if (response.result === "error") {
     $('#user-bad').show();
   } else {
