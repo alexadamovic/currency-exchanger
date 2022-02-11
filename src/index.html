@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Currency Exchanger</title>
+</head>
+<body>
+  <div class="container">
+    <h1>🤑Muh-muh-muh-Money!🤑</h1>
+    <form>
+      <label for="user-dollars">How much $USD do you wanna exchange?? (Don't get smart and try to break this, we're watching you...👀)</label>
+      <input type="number" id="user-dollars" min="0" required>
+      <label for="user-currency-choice">What you lookin' to get?? (Three letter currency code only. We're still watching you... 👁️👄👁️</label>
+      <input type="text" id="user-currency-choice" required>
+      <button type="submit">Gimme that $$$!</button>
+    </form> 
+    <div id="display-results">
+      <p>Woweeeeeee!!! You get <span id="currency-results"></span>. That's a whole lotta cheddar🧀</p>
+      <p>ARGHHHHHH!!!! We told you not to break this. WE ARE ALWAYS WATCHING YOU 👿👿👿</p>
+      <p>Ruh roh... We messed up. <span id="non-user-error"></span></p>
+    </div> 
+  </div>
+</body>
+</html>
