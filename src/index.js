@@ -22,6 +22,10 @@ function getElements(response) {
     $('#currency-results').html(`${response.conversion_result.toFixed(2)} ${response.target_code}`);
   } else if (response['error-type'] === "malformed-request") {
     $('#user-bad').show();
+    $('#user-error-code').html("403: Malformed request");
+  } else if (response['error-type'] === "unsupported-code") {
+    $('#user-bad').show();
+    $('#user-error-code').html("404: Unsupported code");
   } else if (response['error-type'] === "invalid-key") {
     $('#api-bad').show();
   } else {

@@ -7,7 +7,7 @@
   <div class="container">
     <h1>🤑Muh-muh-muh-Money!🤑</h1>
     <form id="exchange-form">
-      <label for="user-dollars">How much $USD do you wanna exchange?? (Don't get smart and try to break this, we're watching you...👀)</label>
+      <label for="user-dollars">How much $USD do you wanna exchange?? (Don't get smart and try to break this, we're watching you... 👀)</label>
       <input type="number" id="user-dollars" min="0" step="0.01" required>
       <label for="user-currency-choice">What you lookin' to get?? (<a href="https://docs.1010data.com/1010dataReferenceManual/DataTypesAndFormats/currencyUnitCodes.html" target="_blank">Three letter ISO currency code</a> only. We're still watching you... 👁️👄👁️)</label>
       <input type="text" id="user-currency-choice" required>
@@ -15,9 +15,9 @@
     </form> 
     <div id="display-results">
       <p id="user-good">Woweeeeeee!!! You get <span id="currency-results"></span>. That's a whole lotta cheddar🧀</p>
-      <p id="user-bad">ARGHHHHHH!!!! We told you not to break this. The API call returned a 400 error which means the currency you entered doesn't exist. WE ARE ALWAYS WATCHING YOU 👿👿👿</p>
-      <p id="api-bad">Looks like we got a 403 over here. 🚨FORBIDDEN🚨. Probably something wrong with our API key. Mea culpa.</p>
-      <p id="show-error">Ruh roh... Something went wrong. Might be on us. Might still be your fault ¯\_(ツ)_/¯. This is what happened: <span id="non-user-error"></span></p>
+      <p id="user-bad">ARGHHHHHH👿👿👿!!!! Can't you read directions?!? The API call returned an error saying that the currency you entered doesn't exist. Here's what you did wrong: <span id="user-error-code"></span></p>
+      <p id="api-bad">Looks like we got a 403 error over here. 🚨FORBIDDEN🚨. Probably something wrong with the API key. Mea culpa.</p>
+      <p id="show-error">Ruh roh... Something 👽<em>strange</em>🛸 is afoot. This is what happened: <span id="non-user-error"></span></p>
     </div> 
   </div>
 </body>
