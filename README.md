@@ -1,8 +1,10 @@
-# (Application Name)
+# Currency Exchanger
 
-#### (Brief Description of Application)
+#### Convert USD to any other ISO 4217 supported currency via the ExchangeRate-API
 
-#### By Alex Adamovic
+#### Contributors
+
+ * _Alex Adamovic_
 
 ## Technologies Used
 
@@ -18,26 +20,11 @@
 * _Popper.js_
 * _Webpack_
 * _ESLint_
-* _Jest_
 * _Babel_
 * _dotenv_
 
-
 ## Description
 
+
+
 ## Setup/Installation Requirements
-
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
-
-## Known Bugs
-
-* _Any known issues_
-* _should go here_
-
-## License
-
-## Contact Information
