@@ -19,8 +19,8 @@ function getElements(response) {
   if (response.result === "success") {
     $('#user-good').show();
     $('#currency-results').html(`${response.conversion_result} ${response.target_code}`);
-  // } else if (response.result !== "success") {
-  //   $('#user-bad').show();
+  } else if (response.result === "error") {
+    $('#user-bad').show();
   } else {
     $('#show-error').show();
     $('#non-user-error').html(`${response}`);
