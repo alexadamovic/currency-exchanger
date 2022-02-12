@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap');
+
+body {
+  background-color: rgb(155, 236, 186);
+}
+
+h1 {
+  font-family: 'Freckle Face';
+  text-align: center;
+  font-size: 5em;
+}
+
 #user-good {
   display: none;
 }
